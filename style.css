@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+        --blue: hsl(246, 80%, 60%);
+        --work: hsl(15, 100%, 70%);
+        --play: hsl(195, 74%, 62%);
+        --study: hsl(348, 100%, 68%);
+        --exercise: hsl(145, 58%, 55%);
+        --social: hsl(264, 64%, 52%);
+        --selfcare: hsl(43, 84%, 65%);
+        --very-dark-blue: hsl(226, 43%, 10%);
+        --dark-blue: hsl(235, 46%, 20%);
+        --desaturated-blue: hsl(235, 45%, 61%);
+        --pale-blue: hsl(236, 100%, 87%);
+        --white: hsl(100, 100%, 100%);
+}
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Rubik', sans-serif;
+}
+
+body {
+        background-color: var(--very-dark-blue);
+        color: var(--white);
+        font-size: 18px;
+}
+
+main {
+        height: calc(100vh - 20px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+
+h3 {
+        font-weight: 300;
+        color: var(--pale-blue);
+        font-size: 0.9rem;
+}
+
+.container {
+        display: flex;
+        width: 100%;
+        max-width: 1140px;
+}
+
+        .area-report {
+                margin: 0px 30px 30px 0px;
+        }
+
+                .card-report {
+                        width: 255px;
+                        height: 100%;
+                        background-color: var(--dark-blue);
+                        border-radius: 20px;
+                        overflow: hidden;
+                        max-height: 520px;
+                }
+
+                .profile {
+                        background-color: var(--desaturated-blue);
+                        display: flex;
+                        flex-direction: column;
+                        border-bottom-left-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                        padding: 30px;
+                        height: 70%;
+                }
+
+                .profile-left, .profile-right {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                }
+                        h1 {
+                                font-weight: 300;
+                        }
+                        .profile img {
+                                width: 90px;
+                                border: 3px solid var(--white);
+                                border-radius: 50%;
+                        }
+
+                .card-report ul {
+                        padding: 30px;
+                }
+
+                .card-report ul li {
+                        list-style: none;
+                        cursor: pointer;
+                        margin-bottom: 10px;
+                        color: var(--pale-blue);
+                }
+                
+                .card-report ul li:hover {
+                        color: var(--white);
+                }
+
+        .area-cards {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+        }
+
+                .card {
+                        width: 255px;
+                        height: 244px;
+                        border-radius: 20px;
+                        overflow-y: hidden;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        margin: 0px 30px 30px 0px;
+                }
+
+                                .work {background: url(images/icon-work.svg) top right no-repeat var(--work);}
+                                .play {background: url(images/icon-play.svg) top right no-repeat var(--play);}
+                                .study {background: url(images/icon-study.svg) top right no-repeat var(--study);}
+                                .exercise {background: url(images/icon-exercise.svg) top right no-repeat var(--exercise);}
+                                .social {background: url(images/icon-social.svg) top right no-repeat var(--social);}
+                                .self {background: url(images/icon-self-care.svg) top right no-repeat var(--selfcare);}
+
+                .card-info {
+                        border-top-left-radius: 20px;
+                        border-top-right-radius: 20px;
+                        background-color: var(--dark-blue);
+                        padding: 35px;
+                }
+
+                .card-info:hover {
+                        background-color: var(--desaturated-blue);
+                }
+
+                        .title {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-bottom: 25px;
+                        }
+
+                                .more img{
+                                        cursor: pointer;
+                                }
+
+                                .more img:hover {
+                                        fill: white;
+                                }
+
+                        .hour {
+                                font-size: 3rem;
+                                font-weight: 300;
+                                margin-bottom: 10px;
+                        }
+
+                        .info {
+                                display: flex;
+                                flex-direction: column;
+                        }
+
+                        .lastweek {
+                                font-weight: 300;
+                                color: var(--pale-blue);
+                                font-size: 0.9rem;
+                        }
+
+
+footer {
+        height: 20px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: var(--desaturated-blue); text-decoration: none; }
+
+.active {
+        color: var(--white) !important;
+}
+
+@media screen and (max-width: 768px) {
+        main {
+                height: auto;
+                padding: 20px;
+        }
+
+        .container {
+                flex-direction: column;
+        }
+
+        .profile {
+                flex-direction: row;
+        }
+
+        .profile-left {
+                width: 120px;
+                flex: unset;
+        }
+
+        .card-report ul {
+                display: flex;
+                justify-content: space-around;
+        }
+
+
+        .area-cards, .area-report {
+                flex-direction: column;
+                margin: 0px 0px 30px 0px;
+        }
+
+        .card-report, .card {
+                width: 100%;
+        }
+
+        .info {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+        }
+
+        .hour {
+                margin-right: 10px;
+        }
+}
